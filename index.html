@@ -8873,17 +8873,18 @@ header nav.active .gla_logo {
                 <!-- grid -->
                 <div class="gla_portfolio_no_padding grid" style="position: relative; height: 1180.11px;">
                     
-                    <div class="col-sm-4 gla_anim_box grid-item engagement" style="position: absolute; left: 0%; top: 0px;">
+					<div class="col-sm-3 gla_anim_box grid-item engagement" style="position: absolute; left: 33.3333%; top: 0px;">
+                       
+                    </div>
+                    <div class="col-sm-6 gla_anim_box grid-item engagement" style="position: absolute; left: 0%; top: 0px;">
                         <div class="gla_shop_item">
-                            <a href="images/bg1.jpg" class="lightbox">
-                                <img src="images/bg1.jpg" alt="">
+                            <a href="images/sl1.jpg" class="lightbox">
+                                <img class="slideit" src="images/sl1.jpg" alt="">
                             </a>
-                            
-    
-
                         </div>
                     </div>
-
+					
+					<!--
                     <div class="col-sm-4 gla_anim_box grid-item engagement" style="position: absolute; left: 33.3333%; top: 0px;">
                         <div class="gla_shop_item">
                             <a href="images/sl1.jpg" class="lightbox">
@@ -8933,7 +8934,7 @@ header nav.active .gla_logo {
                         </div>
                     </div>
 
-
+					-->
                  </div>
                  <!-- grid end -->
                 
@@ -8982,6 +8983,32 @@ header nav.active .gla_logo {
 	
 
 </script>
+
+	<script>
+
+		setInterval(displayHello, 10000);
+		var start = 1;
+		function displayHello(){
+			//var current = $(".slider").attr("background");
+			var bg = $(".slideit").attr('src');//css('background-image');
+			//bg = bg.split("/");
+			
+			start++;
+			if(start>6){
+				start = 1;
+			}
+			
+			console.log(start);
+			//bg = bg.replace('url(','').replace(')','').replace(/\"/gi, "");
+			var imageUrl = "images/sl"+start+".jpg";
+			
+			//$(".slideit").css('background-image', ' url(' + imageUrl + ')');
+			$(".slideit").attr('src', imageUrl);
+			//console.log(imageUrl);
+			//alert(bg);
+		}
+	
+	</script>
 
 
 </body></html>
