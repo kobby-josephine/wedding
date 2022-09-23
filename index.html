@@ -8878,7 +8878,7 @@ header nav.active .gla_logo {
                     </div>
                     <div class="col-sm-6 gla_anim_box grid-item engagement" style="position: absolute; left: 0%; top: 0px;">
                         <div class="gla_shop_item">
-                            <a href="images/sl1.jpg" class="lightbox">
+                            <a href="images/sl1.jpg" class="image-link lightbox">
                                 <img class="slideit" src="images/sl1.jpg" alt="">
                             </a>
                         </div>
@@ -9004,6 +9004,7 @@ header nav.active .gla_logo {
 			
 			//$(".slideit").css('background-image', ' url(' + imageUrl + ')');
 			$(".slideit").attr('src', imageUrl);
+			$(".image-link").attr('href', imageUrl);
 			//console.log(imageUrl);
 			//alert(bg);
 		}
